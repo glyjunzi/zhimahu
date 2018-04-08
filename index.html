@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.bg{
+				width: 100vw;
+				height: 100vh;
+				background-color: #e3662c;
+				position: relative;
+			}
+			.logo{
+				width:30vw;
+				position: absolute;
+				top: 0;
+				left:67vw;
+			}
+			.monkey1,.monkey2,.monkey3{
+				width: 40vw;
+				position: absolute;
+				top: 25vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.number{
+				position: absolute;
+				top: 55vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.loading{
+				position: absolute;
+				top: 60vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.xiyouo{
+				position: absolute;
+				width: 100vw;
+				height: 100vh;
+			}
+			.houzi{
+				position: absolute;
+				width: 50vw;
+				top: 60vh;
+				left: 3vw;
+			}
+			.get{
+				position: absolute;
+				width: 100vw;
+				top: 83vh;
+			}
+			.dati{
+				position: absolute;
+				width: 100vw;
+				height: 100vh;
+			}
+			.go{
+				position: absolute;
+				width: 23vw;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 82vh;
+			}
+			.bg4{
+				position: absolute;
+				width: 100vw;
+				height: 100vh;
+			}
+			.q{
+				position: absolute;
+				width:90vw;
+				top: 10vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.photo{
+				position: absolute;
+				width: 50vw;
+				top:25vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.aa,.bb,.cc,.dd{
+				position: absolute;
+				width: 90vw;
+				top: 30vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.aa{
+				top: 48vh;
+			}
+			.bb{
+				top: 60vh;
+			}
+			.cc{
+				top: 72vh;
+			}
+			.dd{
+				top: 84vh;
+			}
+			
+			/*gai*/
+			.quest{
+				position: absolute;
+				color: white;
+				font-size: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 10vh;
+			}
+			.questa{
+				position: absolute;
+				color: black;
+				font-size: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 50vh;
+			}
+			.questb{
+				position: absolute;
+				color: black;
+				font-size: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 62vh;
+			}
+			.questc{
+				position: absolute;
+				color: black;
+				font-size: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 74vh;
+			}
+			.questd{
+				position: absolute;
+				color: black;
+				font-size: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 86vh;
+			}
+			
+			
+			.bg4 {
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				display: none;
+			}
+			
+			.bgq {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.q,.qsa,.qsb,.qsc,.qsd {
+				width: 90vw;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			.q {
+				top: 8vh;
+			}
+			
+			.qsa {
+				top: 24vh;
+			}
+			
+			.qsb {
+				top: 30vh;
+			}
+			
+			.qsc {
+				top: 36vh;
+			}
+			
+			.qsd {
+				top: 42vh;
+			}
+			
+			.random {
+				height: 18vh;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 25vh;
+			}
+			
+			.qt,.q1,.q2,.q3,.q4 {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			.qt {
+				top: 9vh;
+			}
+			
+			.q1 {
+				top: 27vh;
+			}
+			
+			.q2 {
+				top: 33vh;
+			}
+			
+			.q3 {
+				top: 39vh;
+			}
+			
+			.q4 {
+				top: 45vh;
+			}
+			
+			.xuhao {
+				position: absolute;
+				left: 11vw;
+				top: 16vh;
+			}
+			
+			.qimg {
+				width: 10vw;
+				position: absolute;
+				right: 10vw;
+				display: none;
+			}
+			
+			.qimg1 {
+				top: 27vh;
+			}
+			
+			.qimg2 {
+				top: 33vh;
+			}
+			
+			.qimg3 {
+				top: 39vh;
+			}
+			
+			.qimg4 {
+				top: 45vh;
+			}
+			
+			.bg5 {
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				display: none;
+			}
+			
+			.bgchoujiang {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.again {
+				position: absolute;
+				width: 40vw;
+				left: 5vw;
+				bottom: 0;
+			}
+			
+			.dese {
+				position: absolute;
+				width: 40vw;
+				left: 30vw;
+				bottom: 0;
+			}
+			
+			.choujiang {
+				position: absolute;
+				width: 40vw;
+				right: 5vw;
+				bottom: 0;
+			}
+			
+			.chenhao {
+				position: absolute;
+				top: 41vh;
+				width: 60vw;
+				left: 18vw;
+			}
+			
+			.fenshu {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 28vh;
+				color: darkred;
+				width: 80vw;
+				font-size: 8vw;
+			}
+			
+			.fenshu span {
+				font-size: 9vw;
+				color: yellow;
+			}
+			
+			.chenhao1 {
+				position: absolute;
+				left: 20vw;
+				top: 44vh;
+				color: darkred;
+				text-align: center;
+				font-size: 9vw;
+			}
+			
+			.jiangpin {
+				position: absolute;
+				top: 25vh;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 1vw;
+				display: none;
+			}
+			
+			.bg6 {
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				display: none;
+			}
+			
+			.bgyihan {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.friend {
+				position: absolute;
+				width: 40vw;
+				right: 5vw;
+				bottom: 0;
+			}
+			
+			.zhu {
+				position: absolute;
+				width: 30vw;
+				top: 35vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			.again1 {
+				position: absolute;
+				width: 40vw;
+				left: 5vw;
+				bottom: 0;
+			}
+			
+			.fenshu1 {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 25vh;
+				color: darkred;
+				width: 76vw;
+				font-size: 7vw;
+			}
+			
+			.fenshu1 span {
+				font-size: 9vw;
+				color: yellow;
+			}
+			
+			.bg7{
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				display: none;
+			}
+			.bggo{
+				width: 100vw;
+				height: 100vh;
+				position: absolute;
+			}
+			.again2 {
+				position: absolute;
+				width: 40vw;
+				left: 5vw;
+				bottom: 0;
+			}
+			
+			.choujiang1 {
+				position: absolute;
+				width: 40vw;
+				right: 5vw;
+				bottom: 0;
+			}
+			
+			.xinxiban {
+				position: absolute;
+				width: 75vw;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 30vh;
+			}
+			
+			.xinxi {
+				position: absolute;
+				width: 65vw;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 50vh;
+				font-size: 5vw;
+			}
+			
+			.xinxi input {
+				border-top: transparent;
+				border-left: transparent;
+				border-right: transparent;
+				border-bottom: 1px solid black;
+				background: transparent;
+				width: 45vw;
+			}
+			
+			.xinxi .tijiao {
+				margin-left: 30vw;
+				border: none;
+				width: 30vw;
+				height: 5vh;
+				background: yellow;
+			}
+			
+			/*.address {
+				border-top: transparent;
+				border-left: transparent;
+				border-right: transparent;
+				border-bottom: 1px solid black;
+				background: transparent;
+				width: 45vw;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="bg" >
+			<img class="logo" src="img/logo_03.png"/>
+			<img class="monkey1" src="img/猴子01_05.png"/>
+			<img class="monkey2" src="img/猴子02_05.png" style="display: none;"/>
+			<img class="monkey3" src="img/猴子03_05.png" style="display: none;"/>
+			<div class="number">0%</div>
+			<div class="loading">loading</div>
+		</div>
+		<div class="bg2" style="display: none;">
+			<img class="xiyouo" src="img/31xiyou.png" />
+			<img class="logo" src="img/logo_03.png"/>
+			<img class="houzi" src="img/32houzi.png"/>
+			<img class="get" src="img/33xinzhishi.png"/>
+		</div>
+		<div class="bg3" style="display: none;">
+			<img class="dati" src="img/34答题.png"/>
+			<img class="logo" src="img/logo_03.png"/>
+			<img class="go" src="img/35go.png"/>
+		</div>
+		<div class="bg4">
+			<img src="img/bgloading.png" class="bgq" />
+			<img src="img/q.png" class="q" />
+			<span class="xuhao">001</span>
+			<img src="img/pic1.png" class="random" />
+			<span class="qt"></span>
+			<div class="qsa">
+				<img src="img/qa.png" class="qsa" />
+				<span class="q1">11</span>
+				<img src="img/qy.png" class="qimg1 qimg" />
+			</div>
+			<div class="qsb">
+				<img src="img/qb.png" class="qsb" />
+				<span class="q2">22</span>
+				<img src="img/qy.png" class="qimg2 qimg" />
+			</div>
+			<div class="qsc">
+				<img src="img/qc.png" class="qsc" />
+				<span class="q3">33</span>
+				<img src="img/qy.png" class="qimg3 qimg" />
+			</div>
+			<div class="qsd">
+				<img src="img/qd.png" class="qsd" />
+				<span class="q4">44</span>
+				<img src="img/qy.png" class="qimg4 qimg" />
+			</div>
+
+		</div>
+		<div class="bg5">
+			<img src="img/bgchoujiang.png" class="bgchoujiang" />
+			<img src="img/chenhao.png" class="chenhao" />
+			<img src="img/dese.png" class="dese" />
+			<img src="img/choujiang.png" class="choujiang" />
+			<img src="img/again.png" class="again" />
+			<div class="fenshu">您答对<span>0</span>题，获得<span>0</span>分</div>
+			<div class="chenhao1">西游<span>0</span>级学者</div>
+			<img src='' class="jiangpin" />
+			<img src="img/logo.png" class="logo" />
+		</div>
+		<div class="bg6">
+			<img src="img/bgyihan.png" class="bgyihan" />
+			<img src="img/again.png" class="again1" />
+			<img src="img/friend.png" class="friend" />
+			<img src="img/zhu.png" class="zhu" />
+			<img src="img/logo.png" class="logo" />
+			<div class="fenshu1">您答对<span>0</span>题，获得<span>0</span>分</div>
+		</div>
+		<div class="bg7">
+			<img src="img/bggo.png" class="bggo" />
+			<img src="img/again.png" class="again2" />
+			<img src="img/choujiang.png" class="choujiang1" />
+			<img src="img/xinxiban.png" class="xinxiban" />
+			<img src="img/logo.png" class="logo" />
+			<!--<form action="" method="get" class="xinxi">-->
+				<div class="xinxi">
+				姓名：<input type="text" name="name" class="name" /> 
+				电话：<input type="text" name="tel" class="tel" /> 
+				地址：<input type="text" name="address" class="address">
+				<input type="submit" class="tijiao" value="提交" />
+				</div>
+		<!--	</form>-->
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//猴子动
+		var monkey1 = document.querySelector(".monkey1")
+		var monkey2 = document.querySelector(".monkey2")
+		var monkey3 = document.querySelector(".monkey3")
+		var bg4 = document.querySelector(".bg4")
+		var bg5 = document.querySelector(".bg5")
+		var bg6 = document.querySelector(".bg6")
+		var bg7 = document.querySelector(".bg7")
+		
+		var timer1 = setInterval(function(){
+			if(monkey1.style.display == "block"){
+				monkey1.style.display = "none"
+				monkey2.style.display = "block"
+				monkey3.style.display = "none"
+			}else if(monkey2.style.display == "block"){
+				monkey1.style.display = "none"
+				monkey2.style.display = "none"
+				monkey3.style.display = "block"	
+			}else{
+				monkey1.style.display = "block"	
+				monkey2.style.display = "none"
+				monkey3.style.display = "none"
+			}	
+		},200)
+		//预加载
+		var arr = ['img/15.png','img/31xiyou.png','img/32houzi.png','img/33xinzhishi.png','img/34答题.png','img/35go.png','img/36问题.png',
+'img/37bg4.png','img/5.png','img/A.png','img/again.png','img/B.png','img/bgchoujiang.png','img/bggo.png','img/bgloading.png','img/bgyihan.png','img/C.png',
+'img/chenhao.png','img/choujiang.png','img/D.png','img/dese.png','img/friend.png','img/goicon.png','img/logo_03.png','img/logo.png','img/pic1.png',
+'img/pic10.png','img/pic11.png','img/pic12.png','img/pic13.png','img/pic14.png','img/pic15.png','img/pic16.png','img/pic17.png','img/pic18.png',
+'img/pic19.png','img/pic2.png','img/pic20.png','img/pic21.png','img/pic22.png','img/pic23.png','img/pic24.png','img/pic25.png','img/pic26.png',
+'img/pic27.png','img/pic28.png','img/pic29.png','img/pic3.png','img/pic30.png','img/pic4.png','img/pic5.png','img/pic6.png','img/pic7.png',
+'img/pic8.png','img/pic9.png','img/Q.png','img/qa.png','img/qb.png','img/qc.png','img/qd.png','img/qn.png','img/qy.png','img/xinxiban.png',
+'img/zhu.png','img/猴子01_05.png','img/猴子02_05.png','img/猴子03_05.png',]
+		
+		var count = 0;
+		var number = document.querySelector(".number")
+		var loading = document.querySelector(".loading")
+		var xiyouo = document.querySelector(".xiyouo")
+		var houzi = document.querySelector(".houzi")
+		var get = document.querySelector(".get")
+		var logo = document.querySelector(".logo")
+		var bg = document.querySelector(".bg")
+		var bg2 = document.querySelector(".bg2")
+		var bg3 = document.querySelector(".bg3")
+		var bg4 = document.querySelector(".bg4")
+		var dati = document.querySelector(".dati")
+		var go = document.querySelector(".go")
+	//	console.log(arr.length)
+		for(var i=0;i<arr.length;i++){
+			var a = new Image();
+			//console.log(arr[2])
+			a.src = arr[i]
+			
+			a.onload = function(){
+				count++
+				number.innerText =parseInt((count / 67) * 100) + "%"
+				//if标志所有图片加载完毕
+				if(count == 67){
+					bg.style.display="none";
+					bg2.style.display="block";
+				}
+			}
+		}
+			var timer2 = setInterval(fn,1500)
+				function fn(){
+					$(".houzi").animate({
+						top:"57vh",
+					},function(){
+						$(".houzi").animate({
+						top:"60vh",	
+						})
+				})
+			}	
+		//新知识get区
+		$(".get").on('touchstart',function(){
+			$(".get").animate({
+				top:"85vh",
+			},function(){
+				$(".get").animate({
+				top:"83vh",	
+			})
+		})
+			setTimeout(function(){
+				bg2.style.display = "none"
+				bg3.style.display = "block"
+			},800)
+			})
+		
+		//GO
+		$(".go").on('touchstart',function(){
+			$(".go").animate({
+				top:"84vh",
+			},function(){
+				$(".go").animate({
+				top:"82vh",	
+			})
+			setTimeout(function(){
+				bg3.style.display = "none"
+				bg4.style.display = "block"
+			},800)
+			})
+		})
+		
+		
+		var questionList = {
+		    brand: [
+		        {question: '“黑~芝麻糊~~~哎”,南方黑芝麻的经典广告片“叫卖篇”哪一年在电视上风靡全国？', answer:[["2046年",0],["1990年",0],["1991年",1],["1997年",0]],icon:22},
+		        {question: '“南方黑芝麻”品牌发源地在哪里呢？', answer:[["南极",0],["南山南",0],["广西南宁",0],["广西容县",1]],icon:23},
+		        {question: '砖家建议，一天吃多少克黑芝麻为宜？', answer:[["30-40g",0],["90-100g",0],["10-15g",1],["想吃多少吃多少",0]],icon:24},
+		        {question: '下面不属于黑芝麻功能特性的是？', answer:[["抗衰老",0],["提高生育能力",0],["黑头发",0],["得道成仙",1]],icon:25},
+		        {question: '100g黑芝麻的含钙量是100g牛奶含钙量的多少倍？', answer:[["100倍",0],["10倍",0],["7.5倍",1],["15倍",0]],icon:26},
+		        {question: '南方黑芝麻糊2015年的最新广告片“音乐篇”中，翩翩起舞的女主角身穿什么颜色的裙子呢？', answer:[["黑色",0],["黄色",1],["蓝色",0],["粉色",0]],icon:27},
+		        {question: '这是一道送分题，双12晚上，几点几分锁定浙江卫视可以看南到方黑芝麻糊冠名的《西游奇遇记》首播？', answer:[["20：20",1],["20：10",0],["20：00",0],["20：30",0]],icon:28},
+		        {question: '南方黑芝麻糊冠名的《西游奇遇记》里金星老师扮演的是？', answer:[["白龙马",0],["女儿国国王",0],["太白金星",1],["观音菩萨",0]],icon:29},
+		        {question: '南方黑芝麻糊冠名的《西游奇遇记》首站在哪里拍摄的？', answer:[["花果山",0],["西安",1],["火焰山",0],["北京",0]],icon:30}
+		    ],
+		    xiyou: [
+		        {question: '牛魔王的老婆“铁扇公主”又名？', answer:[["小甜甜",0],["红佛女",0],["药叉女",0],["罗刹女",1]],icon:1},
+		        {question: '八戒为什么长的像个猪？', answer:[["整容失败",0],["他本来就那模样",0],["投错了胎",1],["他喜欢猪，故意变成这样",0]],icon:2},
+		        {question: '玉皇大帝和王母娘娘到底什么关系？', answer:[["夫妻",0],["母子",0],["同事",1],["不清不楚的关系",0]],icon:3},
+		        {question: '黑熊精偷了唐僧的袈裟是为什么？', answer:[["别人的就是好的",0],["开生日趴体",1],["穿的拉轰、能泡妞",0],["金光闪闪，壕气",0]],icon:4},
+		        {question: '二郎神和玉帝是什么关系？', answer:[["父子",0],["叔侄",1],["基友",0],["蓝朋友",0]],icon:5},
+		        {question: '菩提始祖为什么轰走了孙悟空？', answer:[["猴子吃的太多",0],["猴子长的太帅",0],["猴子是逗逼",0],["猴子装逼",1]],icon:6},
+		        {question: '白龙马是谁的儿子？', answer:[["东海龙王",0],["南海龙王",0],["北海龙王",0],["西海龙王",1]],icon:7},
+		        {question: '通天河里的妖怪原本是观音菩萨池塘里的哪条鱼？', answer:[["鲤鱼",1],["鲶鱼",0],["金鱼",0],["金龙鱼",0]],icon:8},
+		        {question: '孙悟空师从何处？', answer:[["唐僧",0],["菩提老祖",1],["自学成才",0],["太白金星",0]],icon:9},
+		        {question: '西游记是谁写的？', answer:[["吴承恩",1],["吴奇隆",0],["吴孟达",0],["吴彦祖",0]],icon:10},
+		        {question: '原著中的孙悟空和下面哪个明星身高最接近？', answer:[["郭敬明",1],["隔壁老王",0],["何炅",0],["黄晓明",0]],icon:11},
+		        {question: '白龙马和被哪吒扒皮的龙三太子是什么关系？', answer:[["堂兄弟",1],["男朋友",0],["大舅舅",0],["好基友",0]],icon:12},
+		        {question: '当年是哪个妖精先谣言“吃唐僧肉可长生不老”？', answer:[["黑熊怪",0],["蛇精男",0],["狮驼洞三怪",0],["金角大王",1]],icon:13},
+		        {question: '要进盘丝洞，要先喊？', answer:[["傅文佩，你开门啊",0],["芝麻开门",1],["我是盘丝大仙",0],["妖精，哪里逃！",0]],icon:14},
+		        {question: '猪八戒前身“天蓬元帅”在天庭任什么职？', answer:[["总政少将",0],["陆军军委",0],["海军总司令",1],["志愿兵",0]],icon:15},
+		        {question: '红孩儿的真实年纪是？', answer:[["5岁",0],["300岁",1],["500岁",0],["100岁",0]],icon:16},
+		        {question: '孙悟空大闹蟠桃会，变成谁的样子骗吃骗喝？', answer:[["王母娘娘",0],["赤脚大仙",1],["太上老君",0],["太白金星",0]],icon:17},
+		        {question: '因为谁导致唐僧赶走孙悟空？', answer:[["孔雀公主",0],["白骨精",1],["狐狸精",0],["金鼻白毛鼠精",0]],icon:18},
+		        {question: '下列人物中没有喝过“孙、八、僧”三人组的圣水的是？', answer:[["虎力大仙",0],["鹿力大仙",0],["羊力大仙",0],["牛力大仙",1]],icon:19},
+		        {question: '第一个想娶唐僧的女妖怪是？', answer:[["凤姐",0],["琵琶精",1],["蝎子精",0],["玉兔精",0]],icon:20},
+		        {question: '太上老君的御用炼丹炉童子是？', answer:[["青狮魔王&白象魔王&大鹏魔王&虎威魔王",0],["奔波儿灞&灞波儿奔",0],["金角大王&银角大王",1],["辟寒大王&辟暑大王&辟尘大王",0]],icon:21}
+		    ]
+		}	
+		
+		//随机问题、答案
+		var arr = questionList.brand; //黑芝麻放入数组
+		var arr1 = questionList.xiyou; //西游放入数组
+		//随机数封装函数
+		function fn1(min, max, len) {
+			var arr = [];
+			var jugde = false;
+			while(arr.length < len) {
+				var r = Math.floor(Math.random() * (max - min) + min)
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] == r) {
+						jugde = true;
+						break;
+					}
+				}
+				if(jugde == false) {
+					arr.push(r)
+				}
+				jugde = false;
+			}
+			return arr;
+		}
+
+		//随机三个黑芝麻下标
+		var brr = fn1(0, 9, 3)
+		//随机七个西游下标
+		var brr1 = fn1(0, 21, 7)
+		//随机quesition放入数组crr
+		console.log(brr, brr1)
+		var crr = [];
+		for(var i = 0; i < brr.length; i++) {
+			crr.push(arr[brr[i]])
+		}
+		for(var i = 0; i < brr1.length; i++) {
+			crr.push(arr1[brr1[i]])
+		}
+		console.log(crr)
+		var crr1 = fn1(0, 10, 10)
+		var crr2;
+		//随机获取问题数组下标
+		var qimg = document.querySelectorAll(".qimg")
+		var random = document.querySelector(".random")
+		var qt = document.querySelector(".qt")
+		var qsa = document.querySelector(".qsa")
+		var qsb = document.querySelector(".qsb")
+		var qsc = document.querySelector(".qsc")
+		var qsd = document.querySelector(".qsd")
+		var sum1 = 0;
+
+		function fn2(i) {
+			crr2 = fn1(0, 4, 4)
+			console.log(crr2)
+			var drr = crr[crr1[i]].answer;			
+			$(".qt").text(crr[crr1[i]].question)
+			qt.style.fontSize = Math.round(Math.sqrt(5000/qt.innerText.length))+'px'
+			$(".q1").text(drr[crr2[0]][0])
+			$(".q2").text(drr[crr2[1]][0])
+			$(".q3").text(drr[crr2[2]][0])
+			$(".q4").text(drr[crr2[3]][0])
+			random.src = "img/pic" + crr[crr1[i]].icon + ".png"
+			for(var i = 0; i < drr.length; i++) {
+				if(drr[crr2[i]][1] == 0) {
+					qimg[i].src = "img/qn.png"
+				} else {
+					qimg[i].src = "img/qy.png"
+				}
+			}
+		}
+
+		function agan() {
+			//随机三个黑芝麻下标
+			var brr = fn1(0, 9, 3)
+			//随机七个西游下标
+			var brr1 = fn1(0, 21, 7)
+			//随机quesition放入数组crr
+			console.log(brr, brr1)
+			var crr = [];
+			for(var i = 0; i < brr.length; i++) {
+				crr.push(arr[brr[i]])
+			}
+			for(var i = 0; i < brr1.length; i++) {
+				crr.push(arr1[brr1[i]])
+			}
+			console.log(crr)
+			var crr1 = fn1(0, 10, 10)
+			var crr2;
+			//随机获取问题数组下标
+			var qimg = document.querySelectorAll(".qimg")
+			var random = document.querySelector(".random")
+			var qsa = document.querySelector(".qsa")
+			var qsb = document.querySelector(".qsb")
+			var qsc = document.querySelector(".qsc")
+			var qsd = document.querySelector(".qsd")
+			var sum1 = 0;
+
+			function fn2(i) {
+				crr2 = fn1(0, 4, 4)
+				console.log(crr2)
+				var drr = crr[crr1[i]].answer;
+				$(".qt").text(crr[crr1[i]].question)
+				qt.style.fontSize = Math.round(Math.sqrt(5000/qt.innerText.length))+'px'
+				$(".q1").text(drr[crr2[0]][0])
+				$(".q2").text(drr[crr2[1]][0])
+				$(".q3").text(drr[crr2[2]][0])
+				$(".q4").text(drr[crr2[3]][0])
+				random.src = "img/pic" + crr[crr1[i]].icon + ".png"
+				for(var i = 0; i < drr.length; i++) {
+					if(drr[crr2[i]][1] == 0) {
+						qimg[i].src = "img/qn.png"
+					} else {
+						qimg[i].src = "img/qy.png"
+					}
+				}
+			}
+		}
+		//选项点击事件
+		var fenshu = document.querySelector(".fenshu")
+		var fenshu1 = document.querySelector(".fenshu1")
+		var span = fenshu.querySelectorAll("span")
+		var span2 = fenshu1.querySelectorAll("span")
+		var xuhao = document.querySelector(".xuhao")
+		var chenhao1 = document.querySelector(".chenhao1")
+		var span1 = chenhao1.querySelector("span")
+		var sum = 0
+		fn2(sum)
+		qsa.addEventListener('click', function() {
+			$(".qsa").animate({
+				top: "25vh"
+
+			}, function() {
+				$(".qsa").animate({
+					top: "24vh"
+
+				})
+			})
+			sum++;
+			xuhao.innerText = "00" + (sum + 1);
+			qimg[0].style.display = "block";
+			setTimeout(function() {
+				qimg[0].style.display = "none";
+				fn2(sum)
+			}, 500)
+			if(qimg[0].src.search("qy") != -1) {
+				sum1++
+			}
+			if(sum == 10 && sum1 >= 8) {
+				bg4.style.display = "none";
+				bg5.style.display = "block";
+				span[0].innerText = sum1;
+				span[1].innerText = sum1;
+				span1.innerText = sum1;
+			} else if(sum == 10 && sum1 < 8) {
+				bg4.style.display = "none";
+				bg6.style.display = "block";
+				span2[0].innerText = sum1;
+				span2[1].innerText = sum1;
+			}
+			if(sum == 10) {
+				sum = 0;
+				sum1 = 0;
+			}
+		}, false)
+		qsb.addEventListener('touchstart', function() {
+			$(".qsb").animate({
+				top: "31vh"
+			}, function() {
+				$(".qsb").animate({
+					top: "30vh"
+				})
+			})
+			sum++;
+			xuhao.innerText = "00" + (sum + 1);
+			qimg[1].style.display = "block";
+			setTimeout(function() {
+				qimg[1].style.display = "none";
+				fn2(sum)
+			}, 500)
+			if(qimg[1].src.search("qy") != -1) {
+				sum1++
+			}
+			if(sum == 10 && sum1 >= 8) {
+				bg4.style.display = "none";
+				bg5.style.display = "block";
+				span[0].innerText = sum1;
+				span[1].innerText = sum1;
+				span1.innerText = sum1;
+			} else if(sum == 10 && sum1 < 8) {
+				bg4.style.display = "none";
+				bg6.style.display = "block";
+				span2[0].innerText = sum1;
+				span2[1].innerText = sum1;
+			}
+			if(sum == 10) {
+				sum = 0;
+				sum1 = 0;
+			}
+		}, false)
+		qsc.addEventListener('touchstart', function() {
+			$(".qsc").animate({
+				top: "37vh"
+			}, function() {
+				$(".qsc").animate({
+					top: "36vh"
+				})
+			})
+			sum++;
+			xuhao.innerText = "00" + (sum + 1);
+			qimg[2].style.display = "block";
+			setTimeout(function() {
+				qimg[2].style.display = "none";
+				fn2(sum)
+			}, 500)
+			if(qimg[2].src.search("qy") != -1) {
+				sum1++
+			}
+			if(sum == 10 && sum1 >= 8) {
+				bg4.style.display = "none";
+				bg5.style.display = "block";
+				span[0].innerText = sum1;
+				span[1].innerText = sum1;
+				span1.innerText = sum1;
+			} else if(sum == 10 && sum1 < 8) {
+				bg4.style.display = "none";
+				bg6.style.display = "block";
+				span2[0].innerText = sum1;
+				span2[1].innerText = sum1;
+			}
+			if(sum == 10) {
+				sum = 0;
+				sum1 = 0;
+			}
+		}, false)
+		qsd.addEventListener('touchstart', function() {
+			$(".qsd").animate({
+				top: "43vh"
+			}, function() {
+				$(".qsd").animate({
+					top: "42vh"
+				})
+			})
+			sum++;
+			xuhao.innerText = "00" + (sum + 1);
+			qimg[3].style.display = "block";
+			setTimeout(function() {
+				qimg[3].style.display = "none";
+				fn2(sum)
+			}, 500)
+			if(qimg[3].src.search("qy") != -1) {
+				sum1++
+			}
+			if(sum == 10 && sum1 >= 8) {
+				bg4.style.display = "none";
+				bg5.style.display = "block";
+				span[0].innerText = sum1;
+				span[1].innerText = sum1;
+				span1.innerText = sum1;
+			} else if(sum == 10 && sum1 < 8) {
+				bg4.style.display = "none";
+				bg6.style.display = "block";
+				span2[0].innerText = sum1;
+				span2[1].innerText = sum1;
+			}
+			if(sum == 10) {
+				sum = 0;
+				sum1 = 0;
+			}
+		}, false)
+
+		//称号页面
+		//抽奖页面
+		var jiangpin = document.querySelector(".jiangpin")
+		var again = document.querySelector(".again")
+		var again1 = document.querySelector(".again1")
+		var choujiang = document.querySelector(".choujiang")
+		var friend = document.querySelector(".friend")
+		var dese = document.querySelector(".dese")
+		var jiangpin = document.querySelector(".jiangpin")
+		again.addEventListener('touchstart', function() {
+			$('.again').animate({
+				bottom: "-1vh"
+
+			}, function() {
+				$('.again').animate({
+					bottom: 0
+				})
+			})
+			setTimeout(function(){
+				bg5.style.display = "none";
+				bg3.style.display = "block";
+				agan()
+			},1000)			
+		}, false)
+		choujiang.addEventListener('touchstart', function() {
+			$('.choujiang').animate({
+				bottom: "-1vh"
+			}, function() {
+				$('.choujiang').animate({
+					bottom: 0
+				})
+			})
+			var arrf = ["img/15.png", "img/5.png"]
+			var r = Math.floor(Math.random() * 2)
+			jiangpin.style.display = "block";
+			jiangpin.src = arrf[r];
+			$('.jiangpin').animate({
+				width: "80vw"
+			})
+		}, false)
+		dese.addEventListener('touchstart', function() {
+			$('.dese').animate({
+				bottom: "-1vh"
+			}, function() {
+				$('.dese').animate({
+					bottom: 0
+				})
+			})
+		}, false)
+		//猪猪界面
+		again1.addEventListener('touchstart', function() {
+			$('.again1').animate({
+				bottom: "-1vh"
+			}, function() {
+				$('.again1').animate({
+					bottom: 0
+				})
+			})
+			setTimeout(function(){
+				bg6.style.display = "none";
+				bg3.style.display = "block";
+				agan()
+			},1000)
+		}, false)
+		friend.addEventListener('touchstart', function() {
+			$('.friend').animate({
+				bottom: "-1vh"
+			}, function() {
+				$('.friend').animate({
+					bottom: 0
+				})
+			})
+		}, false)
+		//奖品跳转
+		jiangpin.addEventListener("touchstart", function() {
+			bg5.style.display = "none";
+			bg7.style.display = "block";
+		}, false)
+
+		//提交页面设置
+		var name = document.querySelector(".name")
+		var address = document.querySelector(".address")
+		var tijiao = document.querySelector(".tijiao")
+		var tel = document.querySelector(".tel")
+		tijiao.addEventListener('touchstart', function() {
+			if(name.value == "" || address.value == "" || tel.value == ""){
+				alert("请填写完整信息")
+			}else{
+				setTimeout(function() {
+					alert("提交成功！请您耐心等待7-10天")
+					bg7.style.display = "none";
+					bg3.style.display = "block";
+					agan()
+				}, 100)
+			}
+		}, false)
+		
+		var reg = /^0?1[34578]\d{9}$/
+		
+		tel.addEventListener("blur", function() {
+			var str = tel.value
+			var res = str.match(reg)
+			console.log(res)
+			if(res == null) {
+				alert("请输入正确的联系方式！")
+				tel.value = ""
+			}
+		}, false)
+	</script>
+</html>
